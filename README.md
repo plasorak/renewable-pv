@@ -31,12 +31,31 @@ Chuck the pods:
 kubectl delete -f pvc_rancher_provided_pod.yaml
 ```
 
-check the data:
+Check the data:
 ```
 minikube ssh
 ls -l /data?
+[ctrl-d]
+```
+## Extra bits
+You can now check that writing the recreating daq apps and writing will work:
+```
+kubectl apply -f pvc_rancher_provided_pod.yaml
+write_pod.sh r6
+write_pod.sh r7
+write_pod.sh r1# just for fun let's see what happens when we want to overwrite a file...
 ```
 
+Chuck the pods (again):
+```
+kubectl delete -f pvc_rancher_provided_pod.yaml
+```
+
+Check the data:
+```
+minikube ssh
+ls -l /data?
+[ctrl-d]
 
 
 

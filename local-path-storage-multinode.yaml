@@ -103,20 +103,16 @@ data:
     {
             "nodePathMap":[
             {
-                    "node":"np04-srv-001",
-                    "paths":["/data0", "/data1", "/data2", "/data3", "/data4"]
+                    "node":"minikube-m02",
+                    "paths":["/data2"]
             },
             {
-                    "node":"np04-srv-002",
-                    "paths":["/data0", "/data1", "/data2", "/data3", "/data4"]
+                    "node":"minikube-m03",
+                    "paths":["/data3", "/data0"]
             },
             {
-                    "node":"np04-srv-003",
-                    "paths":["/data0", "/data1", "/data2", "/data3", "/data4"]
-            },
-            {
-                    "node":"np04-srv-004",
-                    "paths":["/data0", "/data1", "/data2", "/data3", "/data4"]
+                    "node":"minikube-m04",
+                    "paths":["/data4"]
             }
             ]
     }

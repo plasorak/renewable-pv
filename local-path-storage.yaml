@@ -124,7 +124,8 @@ data:
         then
             mv ${VOL_DIR}/${BNAME} ${VOL_DIR}/../${BNAME}
         else
-            mv ${VOL_DIR}/${BNAME} ${VOL_DIR}/../${BNAME}_no_overwrite
+            NOW=$(date +"%Y-%m-%d_%H-%M-%S")
+            mv ${VOL_DIR}/${BNAME} ${VOL_DIR}/../${BNAME}_no_overwrite_${NOW}
         fi
     done
     rm -rf "$VOL_DIR"

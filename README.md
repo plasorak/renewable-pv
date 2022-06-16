@@ -1,7 +1,6 @@
 # renewable-pv
 
-
-To test it you can use minikube on your laptop.
+To test it you can use [minikube](https://minikube.sigs.k8s.io/docs/start/) on your laptop.
 ```
 minikube start --driver=docker
 ```

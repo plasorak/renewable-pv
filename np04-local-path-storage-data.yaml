@@ -7,7 +7,7 @@ metadata:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: raw-data-storage-provisioner-service-account
+  name: local-path-provisioner-service-account
   namespace: raw-data-storage
 
 ---
@@ -40,7 +40,7 @@ roleRef:
   name: raw-data-storage-provisioner-role
 subjects:
   - kind: ServiceAccount
-    name: raw-data-storage-provisioner-service-account
+    name: local-path-provisioner-service-account
     namespace: raw-data-storage
 
 ---
@@ -59,7 +59,7 @@ spec:
       labels:
         app: raw-data-storage-provisioner
     spec:
-      serviceAccountName: raw-data-storage-provisioner-service-account
+      serviceAccountName: local-path-provisioner-service-account
       containers:
         - name: local-path-provisioner
           image: rancher/local-path-provisioner:v0.0.22
@@ -144,7 +144,7 @@ data:
             mv ${VOL_DIR}/${BNAME} ${VOL_DIR}/../${BNAME}_no_overwrite_${NOW}
         fi
     done
-    rm -rf "$VOL_DIR"
+    rmdir "$VOL_DIR"
   helperPod.yaml: |-
     apiVersion: v1
     kind: Pod

@@ -103,20 +103,24 @@ data:
     {
             "nodePathMap":[
             {
-                    "node":"np04-srv-001",
-                    "paths":["/data0", "/data1", "/data2", "/data3", "/data4"]
+                    "node": "DEFAULT_PATH_FOR_NON_LISTED_NODES",
+                    "paths": []
             },
             {
-                    "node":"np04-srv-002",
-                    "paths":["/data0", "/data1", "/data2", "/data3", "/data4"]
+                    "node": "np04-srv-001",
+                    "paths": ["/data0", "/data1", "/data2", "/data3", "/data4"]
             },
             {
-                    "node":"np04-srv-003",
-                    "paths":["/data0", "/data1", "/data2", "/data3", "/data4"]
+                    "node": "np04-srv-002",
+                    "paths": ["/data0", "/data1", "/data2", "/data3", "/data4"]
             },
             {
-                    "node":"np04-srv-004",
-                    "paths":["/data0", "/data1", "/data2", "/data3", "/data4"]
+                    "node": "np04-srv-003",
+                    "paths": ["/data0", "/data1", "/data2", "/data3", "/data4"]
+            },
+            {
+                    "node": "np04-srv-004",
+                    "paths": ["/data0", "/data1", "/data2", "/data3", "/data4"]
             }
             ]
     }
